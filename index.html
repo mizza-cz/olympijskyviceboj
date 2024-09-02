@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <title>Olympijský víceboj</title>
+    <meta
+      name="description"
+      content="Největší školní sportovní projekt, který dětem doporučí vhodné sporty a rozvíjí jejich všestrannost."
+    />
+    <meta
+      name="keywords"
+      content="víceboj, olympijský víceboj, sportovní analýza, sport pro děti"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta
+      property="og:image"
+      content="https://www.olympijskyviceboj.cz./garant/images/content/logo.png"
+    />
+
+    <link rel="preload" href="./front/css/screen.css" as="style" />
+    <link rel="preload" href="./front/css/hotfix.css" as="style" />
+
+    <style id="temp-styles">
+      html {
+        font-size: 16px;
+        font-family: sans-serif;
+      }
+      body {
+        color: rgb(38, 50, 56);
+      }
+      .main-header {
+        background-color: #fff;
+        padding: 0.75rem 0.5rem;
+      }
+      .menu-logo img,
+      .menu-logo a {
+        display: block;
+      }
+      .menu-link {
+        font-size: 18px;
+        font-size: 1.125rem;
+        color: #fff;
+        display: block;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 1rem 0;
+        text-align: center;
+      }
+      .card-body {
+        padding: 2rem;
+        flex: 0 0 100%;
+      }
+      .submenu {
+        display: none;
+      }
+      .show-on-focus,
+      .menu-icon-label {
+        display: none;
+      }
+      .d-none {
+        display: none !important;
+      }
+      .d-flex {
+        display: flex !important;
+      }
+      .social {
+        border-radius: 50%;
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -16px;
+        margin-left: -16px;
+      }
+      .container {
+        max-width: 1342px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .intro {
+        position: relative;
+      }
+      .intro-bg {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
+      .box {
+        background-color: #fff;
+        box-shadow: 0 0 1rem rgba(176, 190, 197, 0.2);
+        border-radius: 0.25rem;
+        padding: 2rem;
+      }
+      .text-center {
+        text-align: center !important;
+      }
+      .btn {
+        font-size: 14px;
+        font-size: 0.875rem;
+        text-decoration: none;
+      }
+
+      .btn-light {
+        color: #212529;
+        background-color: #fff;
+        border-color: #fff;
+      }
+      .btn {
+        display: inline-block;
+        font-weight: 600;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 1rem 2.5rem;
+        font-size: 16px;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+      }
+      .heading {
+        background-color: #0d47a1;
+        padding: 3rem 0 2rem 0;
+        margin-bottom: 4rem;
+        color: white;
+      }
+      .typography p,
+      .typography li,
+      .typography td,
+      .typography th {
+        margin-bottom: 2rem;
+        line-height: 1.75em;
+      }
+      .justify-content-center {
+        justify-content: center !important;
+      }
+      @media (min-width: 1140px) {
+        .d-xl-inline {
+          display: inline !important;
+        }
+        .menu-link {
+          font-weight: 600;
+        }
+        .intro {
+          padding-top: 19rem;
+        }
+      }
+      @media (min-width: 992px) {
+        .main-header {
+          padding-right: 2rem;
+          padding-left: 2rem;
+        }
+        .menu-link {
+          font-size: 14px;
+          font-size: 0.875rem;
+        }
+        .card-body {
+          padding: 3rem 2rem;
+        }
+        .col-lg-4 {
+          flex: 0 0 33.33333%;
+          max-width: 33.33333%;
+        }
+        .col-lg-8 {
+          flex: 0 0 66.66667%;
+          max-width: 66.66667%;
+        }
+        .menu-item + .menu-item {
+          margin-left: 1rem;
+        }
+        .intro {
+          padding-top: 10rem;
+        }
+      }
+      @media (min-width: 768px) {
+        .main-header {
+          padding: 1.5rem 1rem;
+        }
+        .menu {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .menu-item {
+          float: left;
+          list-style: none;
+        }
+        .menu-link {
+          font-size: 12px;
+          font-size: 0.75rem;
+          color: #0d47a1;
+          text-transform: none;
+          font-weight: 400;
+        }
+        .d-md-flex {
+          display: flex !important;
+        }
+        .align-items-center {
+          align-items: center !important;
+        }
+        .menu-login {
+          position: absolute;
+          top: 1.3rem;
+          right: 1rem;
+        }
+        .social-facebook {
+          background: #4460a0;
+        }
+        .social-youtube {
+          background: #ce1312;
+        }
+        .social > svg {
+          fill: #fff;
+        }
+      }
+
+      .sticky-top {
+        top: 8rem !important;
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="./front/css/screen.css?16" />
+
+    <style>
+      div.alert {
+        font-weight: bold;
+        color: #d9534f;
+      }
+
+      div.alert.alert-success {
+        color: #5cb85c;
+      }
+    </style>
+  </head>
+  <body class="home">
+    <a href="#start-of-content" tabindex="1" class="show-on-focus js-skip-to-content"
+      >Presunout na hlavní obsah</a
+    >
+
+    <div class="container mt-5 mb-5 js-ie-msg d-none">
+      <div class="typography">
+        <p class="lead">
+          Zjistili jsme, že používáte <strong>starý prohlížeč</strong>, který bohužel
+          <strong>nedokáže správně zobrazit všechny prvky této stránky</strong>. Prosíme, stáhněte
+          si jeden z novějších prohlížečů, například <strong>Google Chrome</strong> nebo
+          <strong>Firefox</strong>, který se aktualizuje sám a zajistí vám komfortní a ničím
+          nerušené surfování.
+        </p>
+      </div>
+      <div class="btn-group">
+        <a href="https://www.google.com/chrome/" class="btn btn-secondary"
+          >Stáhnout Google Chrome</a
+        >
+        <a href="https://www.firefox.com" class="btn btn-secondary ml-3">Stáhnout Firefox</a>
+      </div>
+    </div>
+    <script>
+      const ua = window.navigator.userAgent;
+      const old_ie = ua.indexOf('MSIE ');
+      const new_ie = ua.indexOf('Trident/');
+      const message = document.querySelector('.js-ie-msg');
+      if (old_ie > -1 || new_ie > -1) {
+        message.classList.remove('d-none');
+      }
+    </script>
+
+    <!-- .main-header -->
+    <header class="main-header group" role="banner">
+      <nav class="menu" role="navigation">
+        <button class="menu-icon-label d-block d-md-none" aria-label="Zobrazit menu">
+          <span class="menu-icon-top menu-icon-wrapper"><span class="menu-icon"></span></span>
+          <span class="menu-icon-bottom menu-icon-wrapper"><span class="menu-icon"></span></span>
+        </button>
+
+        <div class="menu-logo">
+          <a href="/" rel="home"
+            ><img
+              src="./front/images/content/logo.png"
+              alt="Logo olympijský víceboj a odkaz na úvodní stránku"
+              width="137"
+          /></a>
+        </div>
+
+        <div class="menu-collapse">
+          <ul class="menu-item-group d-md-flex align-items-center">
+            <li class="menu-item">
+              <a
+                href="/o-viceboji"
+                class="menu-link icon1"
+                aria-expanded="false"
+                aria-haspopup="true"
+                id="menu"
+                >O víceboji</a
+              >
+              <ul class="submenu" aria-labelledby="menu">
+                <li class="submenu-item">
+                  <a href="/o-viceboji/obecne" class="submenu-link">Obecně</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="/o-viceboji/co-muzete-ziskat" class="submenu-link">Co můžete získat</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="/o-viceboji/data" class="submenu-link">Statistiky</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="/karta-zaka-link" class="submenu-link">Karta žáka</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="/o-viceboji/bila-kniha" class="submenu-link">Bílá kniha</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="/olympijsky-diplom"
+                class="menu-link icon2"
+                aria-expanded="false"
+                aria-haspopup="true"
+                id="menu"
+                >Olympijský diplom</a
+              >
+              <ul class="submenu" aria-labelledby="menu">
+                <li class="submenu-item">
+                  <a href="/olympijsky-diplom/zakladni-informace" class="submenu-link"
+                    >Základní informace</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="/olympijsky-diplom/discipliny" class="submenu-link">Disciplíny</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="/odznak-vsestrannosti"
+                class="menu-link icon3"
+                aria-expanded="false"
+                aria-haspopup="true"
+                id="menu"
+                >Olympijský odznak</a
+              >
+              <ul class="submenu" aria-labelledby="menu">
+                <li class="submenu-item">
+                  <a href="/odznak-vsestrannosti/zakladni-informace" class="submenu-link"
+                    >Základní informace</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="/odznak-vsestrannosti/discipliny" class="submenu-link">Disciplíny</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="/olympijska-pripravka"
+                class="menu-link icon4"
+                aria-expanded="false"
+                aria-haspopup="true"
+                id="menu"
+                >Olympijská přípravka</a
+              >
+              <ul class="submenu" aria-labelledby="menu">
+                <li class="submenu-item">
+                  <a href="/olympijska-pripravka/zakladni-informace" class="submenu-link"
+                    >Základní informace</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="/olympijska-pripravka/karta-sportovce" class="submenu-link"
+                    >Karta sportovce</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="/novinky"
+                class="menu-link icon5"
+                aria-expanded="false"
+                aria-haspopup="true"
+                id="menu"
+                >Novinky</a
+              >
+            </li>
+            <li class="menu-item">
+              <a
+                href="/multimedia"
+                class="menu-link icon6"
+                aria-expanded="false"
+                aria-haspopup="true"
+                id="menu"
+                >Multimédia</a
+              >
+            </li>
+            <li class="menu-item">
+              <a
+                href="/kontakt"
+                class="menu-link icon7"
+                aria-expanded="false"
+                aria-haspopup="true"
+                id="menu"
+                >Kontakt</a
+              >
+            </li>
+
+            <li class="menu-item d-block d-md-none">
+              <a href="/garant" class="menu-link menu-link-ext">Přihlášení</a>
+            </li>
+            <li class="menu-item menu-social text-center text-md-left pt-4 pb-4 pt-md-0 pb-md-0">
+              <a
+                href="https://www.facebook.com/SazkaOlympijskyviceboj"
+                target="_blank"
+                class="social social-facebook"
+                ><svg class="icon-ext" width="14" height="14">
+                  <use xlink:href="#facebook-f"></use></svg
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCNYhywgRDXoSqBgojb0nc7Q"
+                target="_blank"
+                class="ml-2 social social-youtube"
+                ><svg class="icon-ext" width="14" height="14">
+                  <use xlink:href="#youtube-play"></use></svg
+              ></a>
+              <a
+                href="https://www.instagram.com/sazkaolympijskyviceboj/?hl=cs"
+                target="_blank"
+                class="ml-2 social social-instagram"
+              >
+                <svg class="icon-ext" width="14" height="14">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="menu-item text-nowrap d-block d-sm-none">
+              <a href="/garant" class="menu-link d-inline-block">Přihlášení</a>
+            </li>
+            <li class="menu-item text-nowrap d-block d-sm-none">
+              <a href="/registrace" class="menu-link d-inline-block">Registrace</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="d-none d-md-flex">
+          <li class="menu-item text-nowrap">
+            <a href="/garant" class="menu-link d-inline-block">Přihlášení</a>
+          </li>
+          <li class="menu-item text-nowrap">
+            <a href="/registrace" class="menu-link d-inline-block">Registrace</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end .main-header -->
+    <!-- .main-content -->
+    <main class="main-content" role="main" id="start-of-content">
+      <div class="intro">
+        <!-- .container -->
+        <div class="container">
+          <!-- .row -->
+          <div class="row">
+            <div class="col-12 col-lg-4 pt-4 pt-lg-0">
+              <section
+                class="card box p-0 text-center h-100 js-intro-col"
+                data-target="#bg-intro-1"
+              >
+                <div class="card-body typography">
+                  <img
+                    src="./front/images/content/ico-diplom-color.svg"
+                    width="48"
+                    height="60"
+                    alt=""
+                    aria-hidden="true"
+                    class="mb-3"
+                  />
+                  <h2 class="text-green">Olympijský diplom</h2>
+                  <p class="mb-0">
+                    Objevte při tělocviku fyzické předpoklady žáků. Získejte pro ně doporučení
+                    sportů, pro které mají přirozený talent.
+                  </p>
+                </div>
+                <div class="card-footer bg-green">
+                  <a href="/olympijsky-diplom" class="btn btn-light text-green">Více o diplomu</a>
+                </div>
+              </section>
+            </div>
+            <div class="col-12 col-lg-4 pt-4 pt-lg-0">
+              <section
+                class="card box p-0 text-center h-100 js-intro-col"
+                data-target="#bg-intro-2"
+              >
+                <div class="card-body typography">
+                  <img
+                    src="./front/images/content/ico-odznak.svg"
+                    width="48"
+                    height="60"
+                    alt=""
+                    aria-hidden="true"
+                    class="mb-3"
+                  />
+                  <h2 class="text-orange">Olympijský odznak</h2>
+                  <p class="mb-0">
+                    Rozvíjejte sportovní všestrannost vašich žáků během hodin tělesné výchovy a
+                    navíc se účastněte unikátní celorepublikové soutěže.
+                  </p>
+                </div>
+                <div class="card-footer bg-orange">
+                  <a href="/odznak-vsestrannosti" class="btn btn-light text-orange"
+                    >Více o odznaku</a
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- end .row -->
+        </div>
+        <!-- end .container -->
+
+        <img
+          src="./front/images/bg-intro.jpg"
+          alt=""
+          aria-hidde="true"
+          class="intro-bg is-active"
+          id="bg-intro-1"
+        />
+        <img
+          src="./front/images/bg-intro.jpg"
+          alt=""
+          aria-hidde="true"
+          class="intro-bg"
+          id="bg-intro-2"
+        />
+      </div>
+      <!-- end .intro -->
+      <div class="container mt-4 mb-4 mt-md-5 mb-md-5"></div>
+
+      <div class="container">
+        <!-- .row -->
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="article position-relative mb-4 mb-lg-0">
+              <a
+                href="/novinky/olympijske-vyzvy-jsou-u-konce-na-festival-k-jezeru-most-miri-devet-skol"
+                class="article-link d-block text-center"
+              >
+                <img
+                  src="./front/images/bg-intro.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  class="img-fluid w-100 mb-3 rounded js-lazy"
+                />
+                <h3 class="article-title delta mb-2">
+                  Olympijské výzvy jsou u konce! Na festival k jezeru Most míří devět škol
+                </h3>
+                <time datetime="2024-06-26T22:27:00+02:00" class="article-meta">26. 06. 2024</time>
+              </a>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="article position-relative mb-4 mb-lg-0">
+              <a
+                href="/novinky/odmeny-pro-35-skol-predany-rozdelily-si-seky-v-celkove-hodnote-1-000-000-korun"
+                class="article-link d-block text-center"
+              >
+                <img
+                  src="./front/images/bg-intro.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  class="img-fluid w-100 mb-3 rounded js-lazy"
+                />
+                <h3 class="article-title delta mb-2">
+                  Odměny pro 35 škol předány! Rozdělily si šeky v celkové hodnotě 1 000 000 korun
+                </h3>
+                <time datetime="2024-06-19T19:26:00+02:00" class="article-meta">19. 06. 2024</time>
+              </a>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="article position-relative mb-4 mb-lg-0">
+              <a
+                href="/novinky/skoly-si-rozdeli-seky-v-hodnote-1-000-000-korun-vylosovali-jsme-i-olympijske-treninky"
+                class="article-link d-block text-center"
+              >
+                <img
+                  src="./front/images/bg-intro.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  class="img-fluid w-100 mb-3 rounded js-lazy"
+                />
+                <h3 class="article-title delta mb-2">
+                  Školy si rozdělí šeky v hodnotě 1 000 000 korun. Vylosovali jsme i Olympijské
+                  tréninky
+                </h3>
+                <time datetime="2024-06-06T18:38:00+02:00" class="article-meta">06. 06. 2024</time>
+              </a>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="article position-relative mb-4 mb-lg-0">
+              <a
+                href="/novinky/allianz-partnerem-olympijskeho-viceboje-chce-podporit-pohyb-deti-a-zdravy-zivotni-styl"
+                class="article-link d-block text-center"
+              >
+                <img
+                  src="./front/images/bg-intro.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  class="img-fluid w-100 mb-3 rounded js-lazy"
+                />
+                <h3 class="article-title delta mb-2">
+                  Allianz partnerem Olympijského víceboje: Chce podpořit pohyb dětí a zdravý životní
+                  styl
+                </h3>
+                <time datetime="2024-05-15T10:35:00+02:00" class="article-meta">15. 05. 2024</time>
+              </a>
+            </article>
+          </div>
+        </div>
+        <!-- end .row -->
+      </div>
+
+      <div class="hr" aria-hidden="true"></div>
+
+      <!-- .container -->
+      <div class="container"></div>
+      <!-- end .container -->
+
+      <div class="hr" aria-hidden="true"></div>
+
+      <div class="container-fluid">
+        <div class="row align-items-center mt-5 mb-5 mb-xl-0 mt-xl-0">
+          <div class="col-12 col-md-6 order-2">
+            <div class="pl-lg-5 pr-lg-5">
+              <h3 class="alfa mb-2">
+                <a href="/olympijsky-diplom" class="text-primary">Olympijský diplom</a>
+              </h3>
+              <p class="gamma text-green">Objevte sportovní předpoklady vašich žáků</p>
+              <div class="typography">
+                <p>
+                  Pro děti musí být sport zábavou. A většinou je baví, když se jim v něm daří.
+                  Vyberme společně vašim žákům ty správné sporty, pro které mají talent! Po splnění
+                  8 disciplín Olympijského diplomu v hodinách tělesné výchovy získají žáci na konci
+                  školního roku analýzu sportovních předpokladů s doporučením sportů, pro které mají
+                  přirozené vlohy.
+                </p>
+                <a href="/olympijsky-diplom" class="btn btn-gray text-green">Více o diplomu</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 pl-md-0 order-1 mb-4 mb-md-0">
+            <img
+              src="/data/content/diplom.png"
+              srcset="/data/content/diplom.png 2x, /data/content/diplom.png 3x"
+              alt=""
+              aria-hidden="true"
+              width="808"
+              height="602"
+              class="js-lazy d-block img-fluid section-img-left"
+            />
+          </div>
+        </div>
+        <div class="row align-items-center mt-5 mb-5 mb-xl-0 mt-xl-0">
+          <div class="col-12 col-md-6 order-2 order-md-1">
+            <div class="pl-lg-5 pr-lg-5">
+              <h3 class="alfa mb-2">
+                <a href="/odznak-vsestrannosti" class="text-primary">Olympijský odznak</a>
+              </h3>
+              <p class="gamma text-orange">Motivujte žáky ke zlepšování jejich výkonů</p>
+              <div class="typography">
+                <p>
+                  Naučte své žáky, že se mohou zlepšit i v tom, co jim nejde. Absolvujte s nimi
+                  pravidelně 10 disciplín Olympijského odznaku, motivujte je sledováním jejich
+                  pokroků a možností zisku jednoho ze čtyř druhů Olympijského odznaku.
+                </p>
+                <a href="/odznak-vsestrannosti" class="btn btn-gray text-orange">Více o odznaku</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 pl-md-0 order-1 mb-4 mb-md-0">
+            <img
+              src="/data/content/odznak-tabor.png"
+              srcset="/data/content/odznak-tabor.png 2x, /data/content/odznak-tabor.png 3x"
+              alt=""
+              aria-hidden="true"
+              width="808"
+              height="602"
+              class="js-lazy d-block img-fluid section-img-left"
+            />
+          </div>
+        </div>
+        <div class="row align-items-center mt-5 mb-5 mb-xl-0 mt-xl-0">
+          <div class="col-12 col-md-6 order-2">
+            <div class="pl-lg-5 pr-lg-5">
+              <h3 class="alfa mb-2">
+                <a href="o-viceboji/co-muzete-ziskat" class="text-primary">Co můžete získat</a>
+              </h3>
+              <p class="gamma text-secondary">Odměny pro všechny děti, lákavé výhry pro školy</p>
+              <div class="typography">
+                <p>
+                  Vedle atraktivnějšího programu v hodinách tělesné výchovy získáte pro děti zdarma
+                  analýzu pohybových předpokladů a/nebo motivační Olympijské odznaky. Dále můžete
+                  vyhrát Olympijský trénink se známými sportovci, ambasadory Olympijského víceboje,
+                  nebo poukazy na vybavení pro vaší školu.
+                </p>
+                <a href="o-viceboji/co-muzete-ziskat" class="btn btn-gray text-secondary"
+                  >Více o možných výhrách</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 pl-md-0 order-1 mb-4 mb-md-0">
+            <img
+              src="/data/content/snimek-obrazovky-2024-09-01-200331(3).png"
+              srcset="
+                /data/content/snimek-obrazovky-2024-09-01-200331(3).png 2x,
+                /data/content/snimek-obrazovky-2024-09-01-200331(3).png 3x
+              "
+              alt=""
+              aria-hidden="true"
+              width="808"
+              height="602"
+              class="js-lazy d-block img-fluid section-img-left"
+            />
+          </div>
+        </div>
+      </div>
+      <section class="section section-bg text-center mt-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+              <h4 class="alfa mb-3">Ambasadoři víceboje</h4>
+              <!-- .row -->
+              <div class="slider position-relative">
+                <div class="js-slider">
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/dostal-josef-03031993-mg.jpg"
+                      alt="Josef Dostál"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Josef</span>
+                      <br />
+                      Dostál
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/hradilek-vavrinec-10031987-mg.jpg"
+                      alt="Vavřinec Hradilek"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Vavřinec</span>
+                      <br />
+                      Hradilek
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/prskavec-jiri-18051993-mg.jpg"
+                      alt="Jiří Prskavec"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Jiří</span>
+                      <br />
+                      Prskavec
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/topinkova-knapkova-mirka-19091980-mg.jpg"
+                      alt="Miroslava Topinková Knapková"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Miroslava</span>
+                      <br />
+                      Topinková Knapková
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/kolocova-kristyna-01041988-mg.jpg"
+                      alt="Kristýna Hoidarová Kolocová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Kristýna</span>
+                      <br />
+                      Hoidarová Kolocová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/rosolova-denisa-21081986-mg.jpg"
+                      alt="Denisa Helceletová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Denisa</span>
+                      <br />
+                      Helceletová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/svoboda-david-19031985-mg.jpg"
+                      alt="David Svoboda"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>David</span>
+                      <br />
+                      Svoboda
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/snimek-obrazovky-2020-01-30-v-11.50.14.png"
+                      alt="David Drahonínský"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>David</span>
+                      <br />
+                      Drahonínský
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/vacenovska-iveta-22031986-mg.jpg"
+                      alt="Iveta Vacenovská"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Iveta</span>
+                      <br />
+                      Vacenovská
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/kasparkova-sarka-29.jpg"
+                      alt="Šárka Kašpárková"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Šárka</span>
+                      <br />
+                      Kašpárková
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/verner-tomas-03061986-mg.jpg"
+                      alt="Tomáš Verner"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Tomáš</span>
+                      <br />
+                      Verner
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/robert-zmelik.jpg"
+                      alt="Robert Změlík"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Robert</span>
+                      <br />
+                      Změlík
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/vitkova-2-.jpg"
+                      alt="Veronika Vítková"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Veronika</span>
+                      <br />
+                      Vítková
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/janacek-stepan-12061977-mg.jpg"
+                      alt="Štěpán Janáček"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Štěpán</span>
+                      <br />
+                      Janáček
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/kudejova-katerina-17011990-mg.jpg"
+                      alt="Kateřina Kudějová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Kateřina</span>
+                      <br />
+                      Kudějová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/dianova-natalie-01011989-mg.jpg"
+                      alt="Natálie Dianová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Natálie</span>
+                      <br />
+                      Dianová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/kuf-jan-11051991-mg.jpg"
+                      alt="Jan Kuf"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Jan</span>
+                      <br />
+                      Kuf
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/pilat.jpg"
+                      alt="Petr Pilát"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Petr</span>
+                      <br />
+                      Pilát
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/jezek.jpg"
+                      alt="Jiří Ježek"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Jiří</span>
+                      <br />
+                      Ježek
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/diepoldova.jpg"
+                      alt="Tereza Diepoldová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Tereza</span>
+                      <br />
+                      Diepoldová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/kmochova.png"
+                      alt="Tereza Kmochová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Tereza</span>
+                      <br />
+                      Kmochová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/welsch-jiri-27011980-mg.jpg"
+                      alt="Jiří Welsch"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Jiří</span>
+                      <br />
+                      Welsch
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/elhotova.png"
+                      alt="Kateřina Elhotová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Kateřina</span>
+                      <br />
+                      Elhotová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/navratil.jpg"
+                      alt="Michal Navrátil"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Michal</span>
+                      <br />
+                      Navrátil
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/1-1-.png"
+                      alt="Adam Mendrek"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Adam</span>
+                      <br />
+                      Mendrek
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/3-1-2-.png"
+                      alt="Denisa Barešová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Denisa</span>
+                      <br />
+                      Barešová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/anna-luxova.jpg"
+                      alt="Anna Luxová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Anna</span>
+                      <br />
+                      Luxová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/david-palat.jpg"
+                      alt="David Palát"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>David</span>
+                      <br />
+                      Palát
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/jan-tomanek.jpg"
+                      alt="Jan Tománek"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Jan</span>
+                      <br />
+                      Tománek
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/katerina-antosova.jpg"
+                      alt="Kateřina Antošová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Kateřina</span>
+                      <br />
+                      Antošová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/lenka-matouskova.jpg"
+                      alt="Lenka Matoušková"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Lenka</span>
+                      <br />
+                      Matoušková
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/marek-srutka.jpg"
+                      alt="Marek Šrůtka"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Marek</span>
+                      <br />
+                      Šrůtka
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/martin-bihary.jpg"
+                      alt="Martin Biháry"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Martin</span>
+                      <br />
+                      Biháry
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/martin-dvorak.jpg"
+                      alt="Martin Dvořák"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Martin</span>
+                      <br />
+                      Dvořák
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/miroslav-lidinsky.jpg"
+                      alt="Miroslav Lidinský"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Miroslav</span>
+                      <br />
+                      Lidinský
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/pavel-bambousek.jpg"
+                      alt="Pavel Bambousek"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Pavel</span>
+                      <br />
+                      Bambousek
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/tereza-titerova.jpg"
+                      alt="Tereza Titěrová"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Tereza</span>
+                      <br />
+                      Titěrová
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/tomas-myslivecek.jpg"
+                      alt="Tomáš Mysliveček"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Tomáš</span>
+                      <br />
+                      Mysliveček
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="/images/ambassador-preview/164x164/vladimir-hlavac.jpg"
+                      alt="Vladimír Hlaváč"
+                      class="rounded-circle ml-auto mr-auto mb-2 d-block img-fluid js-lazy"
+                    />
+                    <div class="text-secondary person-name">
+                      <span>Vladimír</span>
+                      <br />
+                      Hlaváč
+                    </div>
+                  </div>
+                </div>
+
+                <button class="slider-prev btn-text">
+                  <svg class="icon-ext" width="40" height="40">
+                    <use xlink:href="#arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-next btn-text">
+                  <svg class="icon-ext" width="40" height="40">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- end .row -->
+            </div>
+            <!-- end .col -->
+          </div>
+          <!-- end .row -->
+        </div>
+        <!-- end .container -->
+      </section>
+    </main>
+    <!-- end .main-content -->
+
+    <aside class="border-top widget-ext widget-partners text-center">
+      <div class="js-partners">
+        <div>
+          <h5>Partneři</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="https://www.billa.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/logo-billa-ov.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://lesycr.cz"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/lesy-cr-logo2.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://www.csas.cz/cs/osobni-finance"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/cs-special-screen-rgb(2).png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h5>Partneři</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="https://www.toyota.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/toyota-text-2-002-.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://ceskamincovna.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/cm-logo-80px.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h5>Partneři</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="https://www.ups.com/cz/cs/Home.page"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/ups.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="http://www.bakalari.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/bakalari-50px.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://www.allianz.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/allianz-247-50.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://sportanalytik.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/sportanalytik.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h5>Partneři Paralympijské výzvy</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="http://www.nadacecez.cz/cs/uvod.html"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/nadace-cez-2023.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://www.ceps.cz/cs/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/ceps-50px.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h5>Dodavatelé</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="https://www.alpinepro.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/alpine-pro.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://www.koh-i-noor.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/kohinoor.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h5>Dodavatelé</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="https://prim-hodinky.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/prim.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="http://bit.ly/2OsOYU1"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/smlogo.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://www.infinit.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/infinit-wellness-cmyk.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h5>Mediální partneři</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="http://www.ceskatelevize.cz"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/ct.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="http://www.radiojunior.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/radiojunior-50px.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="http://www.denik.cz"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/denik-50px.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h5>Spolupracující instituce</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="https://agenturasport.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/nsa.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://www.msmt.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/msmt(2).jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+        <div>
+          <h5>Spolupracující instituce</h5>
+          <div class="row justify-content-around align-items-center">
+            <a
+              href="https://www.assk.cz/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/centrasportu.jpg"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="http://www.olympic.cz/text/21--cesky-klub-olympioniku"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/cko.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+            <a
+              href="https://www.cnb.cz/cs/"
+              target="_blank"
+              class="col-6 col-md-2 col-lg-auto text-center mb-4 mb-lg-0"
+              ><img
+                src="/data/partner/preview/ceska-narodni-banka-logo.png"
+                alt=""
+                class="img-fluid m-auto"
+                style="max-height: 96px"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <aside class="widget-contacts widget-ext border-top">
+      <!-- .container -->
+      <div class="container">
+        <!-- .row -->
+        <div class="row typography text-center">
+          <div class="col-12 col-sm-6 col-lg-4 mb-4 mb-lg-0">
+            <p class="mb-0">
+              <strong>E-mail</strong><br /><a href="mailto:viceboj@olympic.cz"
+                >viceboj@olympic.cz</a
+              >
+            </p>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 mb-4 mb-lg-4">
+            <p class="mb-0"><strong>Infolinka</strong><br />+420 720 402 199</p>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <p class="mb-0">
+              <strong>Tiskové oddělení</strong><br />Markéta Kosová (<a
+                href="mailto:kosova@olympic.cz"
+                >kosova@olympic.cz</a
+              >)
+            </p>
+          </div>
+        </div>
+        <!-- end .row -->
+      </div>
+      <!-- end .container -->
+    </aside>
+
+    <!-- .main-footer -->
+    <footer class="main-footer border-top" role="contentinfo">
+      <div class="container text-center">
+        <p class="small">
+          &copy; 2023 eSports.cz &amp; ČOV - Jakékoliv užití obsahu včetně převzetí, šíření či
+          dalšího zpřístupňování článků a fotografií je bez souhlasu ČOV zakázáno.
+        </p>
+      </div>
+    </footer>
+    <!-- end .main-footer -->
+
+    <div class="d-none" aria-hidden="true">
+      <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="arrow-circle-neutral-a" d="M853 1341a8 8 0 1 1 16 0 8 8 0 0 1-16 0z"></path>
+          <path
+            id="arrow-circle-neutral-b"
+            d="M857 1341a1 1 0 0 1 1-1h6a1 1 0 0 1 0 2h-6a1 1 0 0 1-1-1z"
+          ></path>
+          <path
+            id="badge-circle-a"
+            d="M669 1579c0-8.837 7.163-16 16-16s16 7.163 16 16-7.163 16-16 16-16-7.163-16-16z"
+          ></path>
+          <path
+            id="badge-circle-b"
+            d="M682.066 1576.508c0 1.65 1.311 2.989 2.928 2.989s2.928-1.339 2.928-2.99c0-1.65-1.311-2.988-2.928-2.988s-2.928 1.338-2.928 2.989zm3.594 5.287a1.232 1.232 0 0 0-1.322 0 1.234 1.234 0 0 1-1.546-.181c-.458-.467-.51-.437-1.206-.627a1.264 1.264 0 0 1-.885-.902c-.233-.884-.172-.777-.807-1.424a1.293 1.293 0 0 1-.324-1.233c.233-.884.233-.761 0-1.644-.116-.44.008-.91.324-1.232.635-.647.575-.54.807-1.424.116-.44.453-.784.885-.902.867-.237.763-.175 1.397-.822a1.235 1.235 0 0 1 1.21-.33c.867.236.746.236 1.613 0 .432-.118.893.008 1.209.33.635.647.53.585 1.397.822.432.118.77.462.885.902.233.884.172.777.807 1.424.316.322.44.792.324 1.232-.233.885-.232.761 0 1.645.116.44-.008.91-.324 1.232-.635.647-.574.54-.807 1.424-.115.44-.453.784-.885.902-.676.185-.73.143-1.206.627a1.234 1.234 0 0 1-1.546.181zm5.27 3.209a.499.499 0 0 1-.48.687l-1.637-.063-1.127 1.194a.497.497 0 0 1-.822-.155l-1.618-3.98c.337.189.711.3 1.098.3.606 0 1.176-.237 1.605-.667.27-.27.126-.194.78-.37.296-.08.556-.232.791-.415zm-7.276-2.018c.387 0 .76-.11 1.098-.299l-1.619 3.98a.497.497 0 0 1-.821.155l-1.127-1.194-1.638.063a.499.499 0 0 1-.48-.687l1.41-3.47c.236.184.496.337.791.416.652.175.511.099.781.37.429.43.999.666 1.605.666z"
+          ></path>
+          <path
+            id="check-circle-a"
+            d="M536.177 1307.66l4.452-4.452a.387.387 0 0 0 0-.547l-.548-.548a.387.387 0 0 0-.547 0l-3.63 3.63-1.696-1.694a.387.387 0 0 0-.547 0l-.548.547a.387.387 0 0 0 0 .548l2.516 2.516a.387.387 0 0 0 .548 0zM545 1305a8 8 0 1 1-16 0 8 8 0 0 1 16 0z"
+          ></path>
+          <style>
+            .cls-1 {
+              fill: #fff;
+            }
+            .cls-2 {
+              fill: #ccc;
+            }
+            .cls-3 {
+              fill: #dd2d01;
+            }
+            .cls-4 {
+              fill: #dd2c00;
+            }
+            .cls-5 {
+              fill: #ddd;
+            }
+            .cls-6 {
+              fill: #5cadce;
+            }
+            .cls-7 {
+              fill: #dd2f03;
+            }
+            .cls-8 {
+              fill: #dd2e02;
+            }
+          </style>
+          <path id="graph-circle-a" d="M691 1377a8 8 0 1 1 16 0 8 8 0 0 1-16 0z"></path>
+          <path
+            id="graph-circle-b"
+            d="M702.25 1375h-1.845a.375.375 0 0 0-.265.64l.506.506-1.146 1.147-1.146-1.146a.5.5 0 0 0-.707 0l-1.074 1.073a.25.25 0 0 0 0 .353l.354.354a.25.25 0 0 0 .353 0l.72-.72 1.146 1.146a.5.5 0 0 0 .707 0l1.5-1.5.507.507c.236.236.64.069.64-.265v-1.845a.25.25 0 0 0-.25-.25zm.5 5H696v-6.75a.25.25 0 0 0-.25-.25h-.5a.25.25 0 0 0-.25.25v7.25a.5.5 0 0 0 .5.5h7.25a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25z"
+          ></path>
+          <path
+            id="pdf-a"
+            d="M594.84 463.4c1.68-.11 1.95.27 1.78.38 0 0-.24.28-1.78-.37zM600 454v.25h-5.33V449h.25a1 1 0 0 1 .7.29l4.09 4.02c.19.18.29.43.29.69zm-7.78 6.4c.19-.76.48-1.9.26-2.63-.2-1.2-1.77-1.09-2-.28-.2.75 0 1.8.34 3.16a38.25 38.25 0 0 1-1.7 3.52c-1.13.57-3.07 1.83-2.27 2.8.23.27.66.4.9.4.74 0 1.48-.74 2.54-2.53 1.07-.35 2.25-.79 3.29-.96.9.49 1.96.8 2.67.8 1.21 0 1.3-1.3.82-1.78-.58-.55-2.27-.4-3.07-.3a4.13 4.13 0 0 1-1.78-2.2zm2.11-4.84H600v13.46c0 .54-.45.98-1 .98h-14c-.55 0-1-.44-1-.98v-19.04c0-.54.45-.98 1-.98h8.33v5.58a1 1 0 0 0 1 .98zm-5.29 9.35c-.9 1.43-1.45 1.68-1.45 1.65.24-.65 1.17-1.4 1.45-1.65zm3.9-1.8c-.99.2-1.85.61-2.62.9.47-.8.87-1.74 1.19-2.57.4.71.9 1.28 1.44 1.67zm-1.36-3.6c-.2-.66-.2-1.93-.08-1.93.35 0 .31 1.51.08 1.92z"
+          ></path>
+          <path id="play-a" d="M2591 478.5l-50 34.5v-69z"></path>
+          <path
+            id="search-a"
+            d="M626.5 1494.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm9.39 3.15l-3.8-3.8a.37.37 0 0 0-.26-.1h-.41a6.48 6.48 0 0 0-4.92-10.75 6.5 6.5 0 1 0 4.25 11.42v.41c0 .1.04.2.1.27l3.8 3.79c.15.15.39.15.53 0l.71-.7a.38.38 0 0 0 0-.54z"
+          ></path>
+          <path
+            id="teplomer-a"
+            d="M392 811.25h-.05a6.28 6.28 0 0 1-6.2-6.28c.01-2.66 1.5-4.04 2.5-5.17v-17.3a3.75 3.75 0 0 1 7.5 0v17.3c.99 1.12 2.5 2.52 2.5 5.2 0 3.45-2.8 6.25-6.25 6.25zm7.5-28.75a7.5 7.5 0 0 0-15 0v15.89a9.96 9.96 0 0 0-2.5 6.56A10.03 10.03 0 0 0 392 815a10 10 0 0 0 7.5-16.61z"
+          ></path>
+          <path id="trophy-circle-a" d="M691 1449a8 8 0 1 1 16 0 8 8 0 0 1-16 0z"></path>
+          <path
+            id="trophy-circle-b"
+            d="M699.991 1448.299l.164.962a.209.209 0 0 1-.303.223l-.85-.455-.851.455a.209.209 0 0 1-.302-.223l.163-.962-.687-.68a.213.213 0 0 1 .116-.362l.951-.141.426-.875a.207.207 0 0 1 .373 0l.425.875.952.14c.166.027.234.24.11.362zm2.898-.768c0 .355-.51.946-1.337 1.234.122-.44.205-.942.222-1.515h1.115zm-7.778 0v-.281h1.115c.017.573.1 1.076.222 1.515-.825-.288-1.337-.877-1.337-1.234zm8.472-1.406h-1.805v-.703a.418.418 0 0 0-.417-.422h-4.722a.418.418 0 0 0-.417.422v.703h-1.805a.418.418 0 0 0-.417.422v.984c0 1.17 1.352 2.315 2.984 2.503.546.916 1.183 1.294 1.183 1.294v1.266h-.834c-.613 0-1.11.364-1.11.984v.211a.21.21 0 0 0 .208.211h5.138a.21.21 0 0 0 .209-.21v-.212c0-.62-.498-.984-1.111-.984h-.834v-1.266s.637-.378 1.183-1.294c1.637-.19 2.984-1.337 2.984-2.503v-.984a.418.418 0 0 0-.417-.422z"
+          ></path>
+          <path
+            id="user-a"
+            d="M1471 40.26a5.42 5.42 0 1 1 0 10.84 5.42 5.42 0 0 1 0-10.84zm-6.1 11.1l1.57-.39a6.92 6.92 0 0 0 4.53 1.68c1.68 0 3.27-.6 4.53-1.68l1.57.4a3.2 3.2 0 0 1 2.4 2.72 10.44 10.44 0 0 1-17 0 3.2 3.2 0 0 1 2.4-2.73zM1471 60a12 12 0 1 0 0-24 12 12 0 0 0 0 24z"
+          ></path>
+        </defs>
+        <symbol id="angle-down" viewBox="0 0 1792 1792">
+          <path
+            d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10L407 759q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"
+          ></path>
+        </symbol>
+        <symbol id="arrow-circle-down" viewBox="0 0 1792 1792">
+          <path
+            d="M1412 897q0-27-18-45l-91-91q-18-18-45-18t-45 18l-189 189V448q0-26-19-45t-45-19H832q-26 0-45 19t-19 45v502L579 761q-19-19-45-19t-45 19l-91 91q-18 18-18 45t18 45l362 362 91 91q18 18 45 18t45-18l91-91 362-362q18-18 18-45zm252-1q0 209-103 385.5T1281.5 1561 896 1664t-385.5-103T231 1281.5 128 896t103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z"
+          ></path>
+        </symbol>
+        <symbol id="arrow-circle-neutral" viewBox="0 0 16 16">
+          <use
+            fill="#b0bec5"
+            xlink:href="#arrow-circle-neutral-a"
+            transform="translate(-853 -1333)"
+          ></use>
+          <use
+            fill="#fff"
+            xlink:href="#arrow-circle-neutral-b"
+            transform="translate(-853 -1333)"
+          ></use>
+        </symbol>
+        <symbol id="arrow-circle-up" viewBox="0 0 1792 1792">
+          <path
+            d="M1412 895q0-27-18-45l-362-362-91-91q-18-18-45-18t-45 18l-91 91-362 362q-18 18-18 45t18 45l91 91q18 18 45 18t45-18l189-189v502q0 26 19 45t45 19h128q26 0 45-19t19-45V842l189 189q19 19 45 19t45-19l91-91q18-18 18-45zm252 1q0 209-103 385.5T1281.5 1561 896 1664t-385.5-103T231 1281.5 128 896t103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z"
+          ></path>
+        </symbol>
+        <symbol id="arrow-left" viewBox="0 0 40 40">
+          <path
+            fill="#B0BEC5"
+            d="M40 20C40 8.952 31.048 0 20 0S0 8.952 0 20s8.952 20 20 20 20-8.952 20-20zM20 37.42c-9.573 0-17.42-7.75-17.42-17.42 0-9.573 7.75-17.42 17.42-17.42 9.573 0 17.42 7.75 17.42 17.42 0 9.573-7.75 17.42-17.42 17.42zm-1.008-7.46L9.71 20.685a.969.969 0 0 1 0-1.37l9.282-9.275a.969.969 0 0 1 1.37 0l.557.557a.964.964 0 0 1-.016 1.379l-6.895 6.653h15.347a.97.97 0 0 1 .968.968v.806a.97.97 0 0 1-.968.968H14.008l6.903 6.653c.387.38.395 1 .016 1.38l-.556.556a.978.978 0 0 1-1.38 0z"
+          ></path>
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 40 40">
+          <path
+            fill="#B0BEC5"
+            d="M0 20c0 11.048 8.952 20 20 20s20-8.952 20-20S31.048 0 20 0 0 8.952 0 20zM20 2.58c9.573 0 17.42 7.75 17.42 17.42 0 9.573-7.75 17.42-17.42 17.42-9.573 0-17.42-7.75-17.42-17.42 0-9.573 7.75-17.42 17.42-17.42zm1.008 7.46l9.282 9.275a.969.969 0 0 1 0 1.37l-9.282 9.275a.969.969 0 0 1-1.37 0l-.557-.557a.964.964 0 0 1 .016-1.379L26 21.371H10.645a.97.97 0 0 1-.968-.968v-.806a.97.97 0 0 1 .968-.968h15.347l-6.903-6.653a.971.971 0 0 1-.016-1.38l.556-.556a.978.978 0 0 1 1.38 0z"
+          ></path>
+        </symbol>
+        <symbol id="badge-circle" viewBox="0 0 32 32">
+          <use fill="#263238" xlink:href="#badge-circle-a" transform="translate(-669 -1563)"></use>
+          <use fill="#fff" xlink:href="#badge-circle-b" transform="translate(-669 -1563)"></use>
+        </symbol>
+        <symbol id="check-circle" viewBox="0 0 16 16">
+          <use fill="#263238" xlink:href="#check-circle-a" transform="translate(-529 -1297)"></use>
+        </symbol>
+        <symbol id="external-link" viewBox="0 0 1792 1792">
+          <path
+            d="M1408 928v320q0 119-84.5 203.5T1120 1536H288q-119 0-203.5-84.5T0 1248V416q0-119 84.5-203.5T288 128h704q14 0 23 9t9 23v64q0 14-9 23t-23 9H288q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113V928q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10L695 983q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z"
+          ></path>
+        </symbol>
+        <symbol id="facebook-f" viewBox="0 0 1792 1792">
+          <path
+            d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759H734V905H479V609h255V391q0-186 104-288.5T1115 0q147 0 228 12z"
+          ></path>
+        </symbol>
+        <symbol id="forms" viewBox="0 0 406 16" preserveAspectRatio="none">
+          <title>Artboard 1</title>
+          <path class="cls-1" d="M.5.5h15v15H.5z"></path>
+          <path class="cls-2" d="M15 1v14H1V1h14m1-1H0v16h16V0z"></path>
+          <path class="cls-1" d="M156.5.5h15v15h-15z"></path>
+          <path class="cls-3" d="M171 1v14h-14V1h14m1-1h-16v16h16V0z"></path>
+          <path class="cls-1" d="M26.5.5h15v15h-15z"></path>
+          <path class="cls-2" d="M41 1v14H27V1h14m1-1H26v16h16V0z"></path>
+          <path class="cls-1" d="M130.5.5h15v15h-15z"></path>
+          <path class="cls-4" d="M145 1v14h-14V1h14m1-1h-16v16h16V0z"></path>
+          <path class="cls-1" d="M78.5.5h15v15h-15z"></path>
+          <path class="cls-5" d="M93 1v14H79V1h14m1-1H78v16h16V0z"></path>
+          <g id="Ellipse">
+            <circle class="cls-1" cx="216" cy="8" r="7.5"></circle>
+            <path
+              class="cls-2"
+              d="M216 1a7 7 0 1 1-7 7 7 7 0 0 1 7-7m0-1a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"
+            ></path>
+          </g>
+          <g id="Ellipse2">
+            <circle class="cls-1" cx="242" cy="8" r="7.5"></circle>
+            <path
+              class="cls-6"
+              d="M242 1a7 7 0 1 1-7 7 7 7 0 0 1 7-7m0-1a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"
+            ></path>
+          </g>
+          <g id="Ellipse3">
+            <circle class="cls-1" cx="294" cy="8" r="7.5"></circle>
+            <path
+              class="cls-5"
+              d="M294 1a7 7 0 1 1-7 7 7 7 0 0 1 7-7m0-1a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"
+            ></path>
+          </g>
+          <g id="Ellipse4">
+            <circle class="cls-1" cx="372" cy="8" r="7.5"></circle>
+            <path
+              class="cls-7"
+              d="M372 1a7 7 0 1 1-7 7 7 7 0 0 1 7-7m0-1a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"
+            ></path>
+          </g>
+          <g id="Ellipse5">
+            <circle class="cls-1" cx="268" cy="8" r="7.5"></circle>
+            <path
+              class="cls-6"
+              d="M268 1a7 7 0 1 1-7 7 7 7 0 0 1 7-7m0-1a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"
+            ></path>
+          </g>
+          <g id="Ellipse6">
+            <circle class="cls-1" cx="346" cy="8" r="7.5"></circle>
+            <path
+              class="cls-7"
+              d="M346 1a7 7 0 1 1-7 7 7 7 0 0 1 7-7m0-1a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"
+            ></path>
+          </g>
+          <g id="Ellipse7">
+            <circle class="cls-1" cx="320" cy="8" r="7.5"></circle>
+            <path
+              class="cls-5"
+              d="M320 1a7 7 0 1 1-7 7 7 7 0 0 1 7-7m0-1a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"
+            ></path>
+          </g>
+          <g id="Ellipse8">
+            <circle class="cls-1" cx="398" cy="8" r="7.5"></circle>
+            <path
+              class="cls-7"
+              d="M398 1a7 7 0 1 1-7 7 7 7 0 0 1 7-7m0-1a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"
+            ></path>
+          </g>
+          <path id="Ellipse9" class="cls-6" d="M264 8a4 4 0 1 1 4 4 4 4 0 0 1-4-4z"></path>
+          <path id="Ellipse10" class="cls-5" d="M316 8a4 4 0 1 1 4 4 4 4 0 0 1-4-4z"></path>
+          <path id="Ellipse11" class="cls-7" d="M394 8a4 4 0 1 1 4 4 4 4 0 0 1-4-4z"></path>
+          <path class="cls-1" d="M52.5.5h15v15h-15z"></path>
+          <path class="cls-6" d="M67 1v14H53V1h14m1-1H52v16h16V0z"></path>
+          <path class="cls-1" d="M182.5.5h15v15h-15z"></path>
+          <path class="cls-8" d="M197 1v14h-14V1h14m1-1h-16v16h16V0z"></path>
+          <path class="cls-1" d="M104.5.5h15v15h-15z"></path>
+          <path class="cls-5" d="M119 1v14h-14V1h14m1-1h-16v16h16V0z"></path>
+          <path
+            class="cls-6"
+            d="M65.94 5.79a.72.72 0 0 0-.22-.51l-1-1a.77.77 0 0 0-1 0l-5 4.91L56.36 7a.75.75 0 0 0-1 0l-1 1a.71.71 0 0 0 0 1L57 11.71l1 1a.75.75 0 0 0 1 0l1-1 5.72-5.41a.72.72 0 0 0 .22-.51z"
+          ></path>
+          <path
+            class="cls-3"
+            d="M195.94 5.79a.72.72 0 0 0-.22-.51l-1-1a.77.77 0 0 0-1 0l-5 4.91L186.36 7a.75.75 0 0 0-1 0l-1 1a.71.71 0 0 0 0 1l2.64 2.71 1 1a.75.75 0 0 0 1 0l1-1 5.55-5.41a.72.72 0 0 0 .22-.51z"
+          ></path>
+          <path
+            class="cls-5"
+            d="M117.94 5.79a.72.72 0 0 0-.22-.51l-1-1a.77.77 0 0 0-1 0l-5 4.91L108.36 7a.75.75 0 0 0-1 0l-1 1a.71.71 0 0 0 0 1l2.64 2.71 1 1a.75.75 0 0 0 1 0l1-1 5.55-5.41a.72.72 0 0 0 .22-.51z"
+          ></path>
+        </symbol>
+        <symbol id="graph-circle" viewBox="0 0 16 16">
+          <use fill="#263238" xlink:href="#graph-circle-a" transform="translate(-691 -1369)"></use>
+          <use fill="#fff" xlink:href="#graph-circle-b" transform="translate(-691 -1369)"></use>
+        </symbol>
+        <symbol id="image" viewBox="0 0 512 512">
+          <path
+            d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 336H54a6 6 0 0 1-6-6V118a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v276a6 6 0 0 1-6 6zM128 152c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zM96 352h320v-80l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L192 304l-39.515-39.515c-4.686-4.686-12.284-4.686-16.971 0L96 304v48z"
+          ></path>
+        </symbol>
+        <symbol id="info-circle" viewBox="0 0 512 512">
+          <path
+            d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+          ></path>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 448 512">
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+          ></path>
+        </symbol>
+        <symbol id="pdf" viewBox="0 0 16 21">
+          <use fill="#0c47a1" xlink:href="#pdf-a" transform="translate(-584 -449)"></use>
+        </symbol>
+        <symbol id="play" viewBox="0 0 53 72">
+          <use fill="#fff" xlink:href="#play-a" transform="translate(-2540 -443)"></use>
+        </symbol>
+        <symbol id="plus-circle" viewBox="0 0 512 512">
+          <path
+            d="M384 240v32c0 6.6-5.4 12-12 12h-88v88c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-88h-88c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h88v-88c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v88h88c6.6 0 12 5.4 12 12zm120 16c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-48 0c0-110.5-89.5-200-200-200S56 145.5 56 256s89.5 200 200 200 200-89.5 200-200z"
+          ></path>
+        </symbol>
+        <symbol id="search" viewBox="0 0 16 16">
+          <use fill="#263138" xlink:href="#search-a" transform="translate(-620 -1483)"></use>
+        </symbol>
+        <symbol id="teplomer" viewBox="0 0 20 40">
+          <use fill="#cfd8dc" xlink:href="#teplomer-a" transform="translate(-382 -775)"></use>
+        </symbol>
+        <symbol id="trophy-circle" viewBox="0 0 16 16">
+          <use fill="#263238" xlink:href="#trophy-circle-a" transform="translate(-691 -1441)"></use>
+          <use fill="#fff" xlink:href="#trophy-circle-b" transform="translate(-691 -1441)"></use>
+        </symbol>
+        <symbol id="user" viewBox="0 0 24 24">
+          <use fill="#cfd8dc" xlink:href="#user-a" transform="translate(-1459 -36)"></use>
+        </symbol>
+        <symbol id="youtube-play" viewBox="0 0 1792 1792">
+          <path
+            d="M711 1128l484-250-484-253v503zm185-862q168 0 324.5 4.5T1450 280l73 4q1 0 17 1.5t23 3 23.5 4.5 28.5 8 28 13 31 19.5 29 26.5q6 6 15.5 18.5t29 58.5 26.5 101q8 64 12.5 136.5T1792 788v176q1 145-18 290-7 55-25 99.5t-32 61.5l-14 17q-14 15-29 26.5t-31 19-28 12.5-28.5 8-24 4.5-23 3-16.5 1.5q-251 19-627 19-207-2-359.5-6.5T336 1512l-49-4-36-4q-36-5-54.5-10t-51-21-56.5-41q-6-6-15.5-18.5t-29-58.5T18 1254q-8-64-12.5-136.5T0 1004V828q-1-145 18-290 7-55 25-99.5T75 377l14-17q14-15 29-26.5t31-19.5 28-13 28.5-8 23.5-4.5 23-3 17-1.5q251-18 627-18z"
+          ></path>
+        </symbol>
+      </svg>
+    </div>
+
+    <!-- javascript files -->
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" type="text/css" href="./front/css/screen.css?v=2023-03-09" />
+    </noscript>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-30006551-13"
+      type="text/plain"
+      data-cookiecategory="analytics"
+    ></script>
+    <script type="text/plain" data-cookiecategory="analytics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-30006551-13');
+      gtag('config', 'G-K5MTX2Y7RN');
+    </script>
+
+    <link rel="stylesheet" href="./front/css/cookie-consent-config.css" />
+    <script defer src="./front/js/cookie-consent-config.js"></script>
+    <script defer src="./front/js/cookie-consent.js"></script>
+
+    <script>
+      var loadDeferredStyles = function () {
+        var addStylesNode = document.getElementById('deferred-styles');
+        var replacement = document.createElement('div');
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+        document.getElementById('temp-styles').remove();
+      };
+      var raf =
+        window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.msRequestAnimationFrame;
+      if (raf)
+        raf(function () {
+          window.setTimeout(loadDeferredStyles, 0);
+        });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+    <script defer src="./front/components/jquery.min.js"></script>
+    <script defer src="./front/components/slick.min.js"></script>
+
+    <script defer src="./front/components/webfontloader.js"></script>
+    <script defer src="./front/components/lazyload.min.js"></script>
+    <script defer src="./front/components/popper.min.js"></script>
+    <script defer src="./front/components/jquery.magnific-popup.min.js"></script>
+    <script>
+      WebFontConfig = {
+        google: {
+          families: ['Encode+Sans:400,600:latin-ext'],
+        },
+      };
+    </script>
+
+    <script defer src="./front/js/main.min.js"></script>
+    <!-- end javascript files -->
+  </body>
+</html>
