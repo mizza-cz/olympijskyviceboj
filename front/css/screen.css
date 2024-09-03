@@ -7363,7 +7363,7 @@ body.overflow {
 /* [] MAIN HEADER */
 .main-header {
   background-color: #0136ff;
-  padding: 0.75rem 0.5rem;
+  padding: 0rem 0.5rem;
 }
 @media (max-width: 991.98px) {
   .main-header {
@@ -9345,7 +9345,7 @@ h6,
 }
 @media (min-width: 992px) {
   .menu-link {
-    padding: 2.5rem 2rem;
+    padding: 1.9rem 2rem;
   }
 }
 
