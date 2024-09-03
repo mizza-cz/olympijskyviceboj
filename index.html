@@ -286,18 +286,15 @@
           <span class="menu-icon-bottom menu-icon-wrapper"><span class="menu-icon"></span></span>
         </button>
 
-        <div class="menu-logo">
-          <a href="/" rel="home"
-            ><img
-              src="./front/images/content/logo.png"
-              alt="Logo olympijský víceboj a odkaz na úvodní stránku"
-              width="137"
-          /></a>
-        </div>
+        <a class="header__logo" href="/" rel="home"
+          ><img
+            src="./front/images/newlogo.svg"
+            alt="Logo olympijský víceboj a odkaz na úvodní stránku"
+        /></a>
 
         <div class="menu-collapse">
           <ul class="menu-item-group d-md-flex align-items-center">
-            <li class="menu-item">
+            <!-- <li class="menu-item">
               <a
                 href="/o-viceboji"
                 class="menu-link icon1"
@@ -323,15 +320,16 @@
                   <a href="/o-viceboji/bila-kniha" class="submenu-link">Bílá kniha</a>
                 </li>
               </ul>
-            </li>
+            </li> -->
             <li class="menu-item">
               <a
                 href="/olympijsky-diplom"
-                class="menu-link icon2"
+                class="menu-link icon1"
                 aria-expanded="false"
                 aria-haspopup="true"
                 id="menu"
-                >Olympijský diplom</a
+                >Olympijský <br />
+                diplom</a
               >
               <ul class="submenu" aria-labelledby="menu">
                 <li class="submenu-item">
@@ -347,11 +345,12 @@
             <li class="menu-item">
               <a
                 href="/odznak-vsestrannosti"
-                class="menu-link icon3"
+                class="menu-link icon2"
                 aria-expanded="false"
                 aria-haspopup="true"
                 id="menu"
-                >Olympijský odznak</a
+                >Olympijský <br />
+                odznak</a
               >
               <ul class="submenu" aria-labelledby="menu">
                 <li class="submenu-item">
@@ -367,11 +366,11 @@
             <li class="menu-item">
               <a
                 href="/olympijska-pripravka"
-                class="menu-link icon4"
+                class="menu-link icon3"
                 aria-expanded="false"
                 aria-haspopup="true"
                 id="menu"
-                >Olympijská přípravka</a
+                >Školní akce</a
               >
               <ul class="submenu" aria-labelledby="menu">
                 <li class="submenu-item">
@@ -385,6 +384,16 @@
                   >
                 </li>
               </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="#"
+                class="menu-link icon4"
+                aria-expanded="false"
+                aria-haspopup="true"
+                id="menu"
+                >Spolupracujeme</a
+              >
             </li>
             <li class="menu-item">
               <a
@@ -420,31 +429,6 @@
             <li class="menu-item d-block d-md-none">
               <a href="/garant" class="menu-link menu-link-ext">Přihlášení</a>
             </li>
-            <li class="menu-item menu-social text-center text-md-left pt-4 pb-4 pt-md-0 pb-md-0">
-              <a
-                href="https://www.facebook.com/SazkaOlympijskyviceboj"
-                target="_blank"
-                class="social social-facebook"
-                ><svg class="icon-ext" width="14" height="14">
-                  <use xlink:href="#facebook-f"></use></svg
-              ></a>
-              <a
-                href="https://www.youtube.com/channel/UCNYhywgRDXoSqBgojb0nc7Q"
-                target="_blank"
-                class="ml-2 social social-youtube"
-                ><svg class="icon-ext" width="14" height="14">
-                  <use xlink:href="#youtube-play"></use></svg
-              ></a>
-              <a
-                href="https://www.instagram.com/sazkaolympijskyviceboj/?hl=cs"
-                target="_blank"
-                class="ml-2 social social-instagram"
-              >
-                <svg class="icon-ext" width="14" height="14">
-                  <use xlink:href="#instagram"></use>
-                </svg>
-              </a>
-            </li>
 
             <li class="menu-item text-nowrap d-block d-sm-none">
               <a href="/garant" class="menu-link d-inline-block">Přihlášení</a>
@@ -454,17 +438,97 @@
             </li>
           </ul>
         </div>
-
-        <ul class="d-none d-md-flex">
-          <li class="menu-item text-nowrap">
-            <a href="/garant" class="menu-link d-inline-block">Přihlášení</a>
-          </li>
-          <li class="menu-item text-nowrap">
-            <a href="/registrace" class="menu-link d-inline-block">Registrace</a>
-          </li>
-        </ul>
+        <div class="header__info">
+          <div class="menu-social">
+            <a
+              href="https://www.facebook.com/SazkaOlympijskyviceboj"
+              target="_blank"
+              class="social social-facebook"
+            >
+              <svg
+                width="36"
+                height="35"
+                viewBox="0 0 36 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.9147 0C8.26272 0 0.41272 7.85 0.41272 17.502C0.41272 27.151 8.26272 35 17.9147 35C27.5637 35 35.4127 27.151 35.4127 17.502C35.4127 7.85 27.5637 0 17.9147 0ZM22.2657 18.115H19.4207V28.263H15.1977V18.115H13.1937V14.532H15.1977V12.211C15.1977 10.549 15.9867 7.953 19.4567 7.953L22.5847 7.964V11.448H20.3157C19.9447 11.448 19.4207 11.631 19.4207 12.425V14.532H22.6327L22.2657 18.115Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCNYhywgRDXoSqBgojb0nc7Q"
+              target="_blank"
+              class="social social-youtube"
+            >
+              <svg
+                width="36"
+                height="35"
+                viewBox="0 0 36 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M35.5742 17.5C35.5742 7.835 27.7392 0 18.0742 0C8.40922 0 0.574219 7.835 0.574219 17.5C0.574219 27.165 8.40922 35 18.0742 35C27.7392 35 35.5742 27.165 35.5742 17.5ZM27.5042 18.262C27.5042 19.858 27.3592 21.478 27.3592 21.478C27.3592 21.478 27.1902 22.832 26.6342 23.436C25.9082 24.234 25.1102 24.234 24.7482 24.282C22.0882 24.476 18.0982 24.5 18.0982 24.5C18.0982 24.5 13.1412 24.428 11.6182 24.282C11.2072 24.21 10.2402 24.234 9.51422 23.436C8.93422 22.832 8.78922 21.478 8.78922 21.478C8.78922 21.478 8.64422 19.858 8.64422 18.262V16.762C8.64422 15.167 8.78922 13.547 8.78922 13.547C8.78922 13.547 8.95822 12.193 9.51422 11.588C10.2402 10.79 11.0382 10.766 11.4002 10.718C14.0842 10.524 18.0742 10.5 18.0742 10.5C18.0742 10.5 22.0642 10.524 24.7232 10.718C25.0862 10.766 25.9082 10.79 26.6342 11.564C27.2142 12.168 27.3592 13.547 27.3592 13.547C27.3592 13.547 27.5042 15.167 27.5042 16.762V18.262ZM16.1152 20.075L21.2422 17.319L16.1152 14.514V20.075Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/sazkaolympijskyviceboj/?hl=cs"
+              target="_blank"
+              class="social social-instagram"
+            >
+              <svg
+                width="36"
+                height="35"
+                viewBox="0 0 36 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.5852 17.5C21.5852 19.35 20.0852 20.85 18.2352 20.85C16.3862 20.85 14.8862 19.35 14.8862 17.5C14.8862 15.65 16.3862 14.15 18.2352 14.15C20.0852 14.15 21.5852 15.65 21.5852 17.5Z"
+                  fill="white"
+                />
+                <path
+                  d="M26.0692 11.5735C25.9082 11.1375 25.6512 10.7425 25.3172 10.4175C24.9932 10.0845 24.5982 9.82749 24.1622 9.66649C23.8082 9.52949 23.2762 9.36549 22.2962 9.32049C21.2362 9.27249 20.9182 9.26149 18.2352 9.26149C15.5522 9.26149 15.2342 9.27149 14.1752 9.32049C13.1952 9.36549 12.6632 9.52949 12.3092 9.66649C11.8722 9.82749 11.4782 10.0845 11.1542 10.4175C10.8202 10.7425 10.5632 11.1365 10.4022 11.5735C10.2642 11.9275 10.1002 12.4595 10.0562 13.4395C10.0072 14.4995 9.99719 14.8165 9.99719 17.5005C9.99719 20.1835 10.0072 20.5015 10.0562 21.5605C10.1002 22.5405 10.2642 23.0725 10.4022 23.4265C10.5632 23.8635 10.8202 24.2575 11.1532 24.5825C11.4782 24.9155 11.8722 25.1725 12.3092 25.3335C12.6632 25.4715 13.1952 25.6355 14.1752 25.6795C15.2342 25.7285 15.5522 25.7385 18.2352 25.7385C20.9192 25.7385 21.2372 25.7285 22.2962 25.6795C23.2762 25.6355 23.8082 25.4715 24.1622 25.3335C25.0382 24.9955 25.7312 24.3035 26.0692 23.4265C26.2072 23.0725 26.3702 22.5405 26.4152 21.5605C26.4632 20.5015 26.4742 20.1835 26.4742 17.5005C26.4742 14.8165 26.4632 14.4995 26.4152 13.4395C26.3712 12.4595 26.2072 11.9275 26.0692 11.5735ZM18.2352 22.6605C15.3862 22.6605 13.0752 20.3495 13.0752 17.5005C13.0752 14.6505 15.3862 12.3395 18.2352 12.3395C21.0852 12.3395 23.3962 14.6505 23.3962 17.5005C23.3962 20.3495 21.0852 22.6605 18.2352 22.6605ZM23.6002 13.3415C22.9342 13.3415 22.3942 12.8015 22.3942 12.1355C22.3942 11.4695 22.9342 10.9305 23.6002 10.9305C24.2662 10.9305 24.8052 11.4695 24.8052 12.1355C24.8052 12.8015 24.2662 13.3415 23.6002 13.3415Z"
+                  fill="white"
+                />
+                <path
+                  d="M18.2356 0C8.5726 0 0.735596 7.836 0.735596 17.5C0.735596 27.163 8.5726 35 18.2356 35C27.8996 35 35.7356 27.163 35.7356 17.5C35.7356 7.836 27.8996 0 18.2356 0ZM28.2236 21.643C28.1756 22.713 28.0056 23.443 27.7566 24.082C27.2346 25.432 26.1676 26.499 24.8176 27.021C24.1786 27.27 23.4486 27.439 22.3786 27.488C21.3076 27.537 20.9646 27.549 18.2356 27.549C15.5066 27.549 15.1646 27.537 14.0926 27.488C13.0236 27.439 12.2926 27.27 11.6536 27.021C10.9826 26.769 10.3756 26.373 9.8736 25.862C9.3626 25.36 8.9666 24.753 8.7146 24.082C8.4666 23.443 8.2966 22.713 8.2476 21.643C8.1986 20.571 8.1866 20.229 8.1866 17.5C8.1866 14.771 8.1986 14.429 8.2476 13.357C8.2966 12.287 8.4656 11.557 8.7146 10.918C8.9666 10.247 9.3626 9.64 9.8736 9.138C10.3756 8.627 10.9826 8.231 11.6536 7.979C12.2926 7.73 13.0226 7.561 14.0926 7.512C15.1646 7.463 15.5066 7.451 18.2356 7.451C20.9646 7.451 21.3076 7.463 22.3786 7.512C23.4486 7.561 24.1786 7.73 24.8176 7.979C25.4886 8.231 26.0956 8.627 26.5976 9.138C27.1096 9.64 27.5046 10.247 27.7566 10.918C28.0056 11.557 28.1756 12.287 28.2246 13.357C28.2726 14.429 28.2846 14.771 28.2846 17.5C28.2846 20.229 28.2726 20.571 28.2236 21.643Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+          <a href="#" class="header-decore">
+            <svg
+              width="55"
+              height="41"
+              viewBox="0 0 55 41"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.2956 0.5L0.664551 19.484L7.66155 40.5L54.1726 0.5L7.65655 17.004L10.2956 0.5Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <ul class="d-none d-md-flex menu-registr">
+            <li class="menu-item text-nowrap">
+              <a href="/garant" class="menu-link d-inline-block">Přihlášení</a>
+            </li>
+            <li class="menu-item text-nowrap">
+              <a href="/registrace" class="menu-link d-inline-block">Registrace</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
+    <header class="header"></header>
     <!-- end .main-header -->
     <!-- .main-content -->
     <main class="main-content" role="main" id="start-of-content">
@@ -478,23 +542,18 @@
                 class="card box p-0 text-center h-100 js-intro-col"
                 data-target="#bg-intro-1"
               >
-                <div class="card-body typography">
-                  <img
-                    src="./front/images/content/ico-diplom-color.svg"
-                    width="48"
-                    height="60"
-                    alt=""
-                    aria-hidden="true"
-                    class="mb-3"
-                  />
-                  <h2 class="text-green">Olympijský diplom</h2>
-                  <p class="mb-0">
-                    Objevte při tělocviku fyzické předpoklady žáků. Získejte pro ně doporučení
-                    sportů, pro které mají přirozený talent.
+                <a href="#" class="card-body__img">
+                  <img src="./front/images/card-1.png" alt="" />
+                </a>
+                <div class="card-body__content">
+                  <p>
+                    Objevte při tělocviku <br />
+                    fyzické předpoklady žáků.
+                    <br />
+                    Získejte pro ně doporučení sportů,
+                    <br />
+                    pro které mají přirozený talent.
                   </p>
-                </div>
-                <div class="card-footer bg-green">
-                  <a href="/olympijsky-diplom" class="btn btn-light text-green">Více o diplomu</a>
                 </div>
               </section>
             </div>
@@ -503,25 +562,31 @@
                 class="card box p-0 text-center h-100 js-intro-col"
                 data-target="#bg-intro-2"
               >
-                <div class="card-body typography">
-                  <img
-                    src="./front/images/content/ico-odznak.svg"
-                    width="48"
-                    height="60"
-                    alt=""
-                    aria-hidden="true"
-                    class="mb-3"
-                  />
-                  <h2 class="text-orange">Olympijský odznak</h2>
-                  <p class="mb-0">
-                    Rozvíjejte sportovní všestrannost vašich žáků během hodin tělesné výchovy a
-                    navíc se účastněte unikátní celorepublikové soutěže.
-                  </p>
+                <div class="card-body__img">
+                  <img src="./front/images/card-2.png" alt="" />
                 </div>
-                <div class="card-footer bg-orange">
-                  <a href="/odznak-vsestrannosti" class="btn btn-light text-orange"
-                    >Více o odznaku</a
-                  >
+                <div class="card-body__content">
+                  <a href="#" class="card-body__video">
+                    <img src="./front/images/content/card-y.png" alt="" />
+                  </a>
+                </div>
+              </section>
+            </div>
+            <div class="col-12 col-lg-4 pt-4 pt-lg-0">
+              <section
+                class="card box p-0 text-center h-100 js-intro-col"
+                data-target="#bg-intro-3"
+              >
+                <a href="#" class="card-body__img">
+                  <img src="./front/images/card-3.png" alt="" />
+                </a>
+                <div class="card-body__content">
+                  <p>
+                    Rozvíjejte sportovní všestrannost <br />
+                    vašich žáků během hodin <br />
+                    tělesné výchovy a navíc se účastněte <br />
+                    unikátní celorepublikové soutěže.
+                  </p>
                 </div>
               </section>
             </div>
